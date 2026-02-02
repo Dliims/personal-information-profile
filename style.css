@@ -30,7 +30,7 @@
     black,
         #0f2a8a,
      rgba(30, 136, 229),
-     rgba(255, 255, 255, 0.6),
+     rgba(255, 255, 255, 1.6),
      rgba(30,136,229,9.6),
      rgba(30, 136, 229, 1.0),
      rgba(30, 136, 229, 1.0),
@@ -39,8 +39,9 @@
     black
     
     /* #0ec8e9 */
+    
   );
-   
+  
     
 }
 
@@ -62,6 +63,7 @@ body{
   height:80px;
   background:var(--top-bar-gradient);
   z-index:1;
+   border-radius: 10px;
 }
 
 .slide{
@@ -100,7 +102,16 @@ body{
     position:relative;
   overflow:visible;
   width:35%;
-  background:rgba(255,255,255,10);
+  background:rgba(255,255,255,1);
+     /* border:2px solid rgba(15,42,138,0.5);   /* ✅ BORDER FIX */
+  /* border-radius:19px;  */
+    box-shadow: 
+    6px 0 18px rgba(15,23,42,0.12)
+      /* soft separation */ ;
+  border-right:1.5px solid rgba(30,136,229,0.25);
+   /* border-left:1.5px solid rgba(30,136,229,0.25);
+   border-bottom:1.5px solid rgba(30,136,229,0.25); */
+
   position:relative;
   text-align:center;
   padding:40px 20px;
@@ -108,10 +119,12 @@ body{
   width:35%;
   height:100%;
   position:relative;
+  
 }
 
 /* TOP COLORFUL BAR */
 .profile::before{
+
       display:none;
 
   content:"";
@@ -256,6 +269,7 @@ body{
   box-shadow:0 10px 25px rgba(15,23,42,0.15);
   z-index:5;
   transition: 0.4s;
+ 
 }
 
 
@@ -305,7 +319,7 @@ body{
 
 .intro{
   display:flex;
-  gap:30px;
+  gap:10px;
   font-size:14px;
   margin-bottom:28px;
   color:#475569;
@@ -398,36 +412,33 @@ body{
   width:65%;
   padding:55px;
   position:relative;
+    border-right:1.4px solid rgba(30,136,229,1);
+    border-bottom:1.4px solid rgba(30,136,229,1);
+    border-radius: 18px;
 }
 .content::before{
-      display:none;
-
+     display: none;
   content:"";
   position:absolute;
-  top:0;
+  top:89px;
   right:0;
   width:100%;
-  height:105px;
-
-  /* background:linear-gradient(
+  height:10px;
+  border: 2px solid #0f2a8a 2px;
+  border-radius: 70%;
+ /* background:var(--top-bar-gradient); */
+  background:linear-gradient(
     135deg,
-        #0ec8e9,
-        #0f2a8a,
-     rgba(30,136,229),
-    rgba(23, 89, 147),
-    rgba(10, 37, 61)
-   
-  ); */
-
-
-  content:"";
-  position:absolute;
-  top:0;
-  right:0;
-  width:100%;
-  height:105px;
-  background:var(--top-bar-gradient);
-
+    
+        rgba(30, 136, 229, 1.0),
+      rgba(30, 136, 229, 1.0),
+      #0f2a8a,
+     #0f2a8a,
+     black
+    
+     
+  );
+z-index: 0;
 
 
 
